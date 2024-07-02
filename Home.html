@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developer Skills</title>
+    <meta name="description" content="Replicating kinetic typography effect from Codrops" />
+    <meta name="author" content="Your Name" />
+    <link rel="stylesheet" href="https://use.typekit.net/eqx3jwb.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+            <!-- SVG gradients and animation -->
+            <defs>
+                <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 205, 40, 60)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255, 255, 250, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(250, 255, 255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
+                </radialGradient>
+            </defs>
+            <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)">
+                <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)">
+                <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)">
+                <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+            </rect>
+        </svg>
+    </div>
+
+    <!-- Include GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="About Me.html">About Me</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content-container">
+            <div id="text-content">
+                <h2 id="slideshow-text">Welcome to My Portfolio</h2>
+                <p>Here you can find information about my skills, projects, and more.</p>
+            </div>
+            <div id="slideshow-container">
+                <div id="slideshow">
+                    <img id="slide" src="https://pikwizard.com/pw/medium/8a2b8a7eeb7ef121982f019ce9708eeb.jpg" alt="Slideshow Image">
+                </div>
+                <button id="prevBtn" onclick="prevImage()">Prev</button>
+                <button id="nextBtn" onclick="nextImage()">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <section id="newsletter">
+        <h2>Interested in receiving premium benefits, newsletters, and updates? Then please subscribe!</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <script>
+        var images = [
+            'https://pikwizard.com/pw/medium/8a2b8a7eeb7ef121982f019ce9708eeb.jpg',
+            'https://pikwizard.com/pw/medium/36a7247b6799831b1e70b98e04fc699f.jpg',
+            'https://pikwizard.com/pw/medium/dc05e5203363efc9f1d5ef69f35653d2.jpg',
+            'https://pikwizard.com/pw/medium/da9bf3304e5b9f8e838a3bbe86fa2643.jpg'
+        ];
+        
+        var texts = [
+            'Welcome to My Portfolio',
+            'Exploring the Beautiful Colorado',
+            'Our Happy Clients',
+            'Dog Care Center - Wags n Tails'
+        ];
+
+        var currentIndex = 0;
+        var slideshow = document.getElementById('slide');
+        var slideshowText = document.getElementById('slideshow-text');
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            slideshow.src = images[currentIndex];
+            slideshowText.textContent = texts[currentIndex];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            slideshow.src = images[currentIndex];
+            slideshowText.textContent = texts[currentIndex];
+        }
+
+        // Automatically change image and text every 3 seconds
+        setInterval(nextImage, 3000);
+    </script>
+
+    <main>
+        <section id="team">
+            <div class="team-members">
+                <div class="team-member">
+                    <a href="Wags n Tails.html" title='Click here for more information about the Dog care center'>
+                        <img src="https://pikwizard.com/pw/medium/da9bf3304e5b9f8e838a3bbe86fa2643.jpg" alt="Train Passenger Subway Station">
+                        <p>Efforts, goals, and contributions.</p>
+                    </a>
+                </div>
+                <div class="team-member">
+                    <a href="Clients.html" title="Work that I can possibly provide to any Client">
+                        <img src="https://pikwizard.com/pw/medium/dc05e5203363efc9f1d5ef69f35653d2.jpg" alt="Team Member 2">
+                        <p>Clients</p>
+                    </a>
+                </div>
+                <div class="team-member">
+                    <a href="Colorado.html" title="Showcasing the beautiful nature.">
+                        <img src="https://pikwizard.com/pw/medium/36a7247b6799831b1e70b98e04fc699f.jpg" alt="Team Member 3">
+                        <p>Colorado</p>
+                    </a>
+                </div>
+                <div class="team-member">
+                    <a href="Certifications.html" title="Showcase all the certs I have gained for Tech.">
+                        <img src="https://pikwizard.com/pw/medium/8a2b8a7eeb7ef121982f019ce9708eeb.jpg" alt="Team Member 4">
+                        <p>Certifications</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="Myself">
+            <h2>Myself</h2>
+            <p></p>
+        </section>
+        <section id="What I offer">
+            <h2>My skillset</h2>
+            <p>Here is a Hyperlink to my LinkedIn Profile Page. <a href="https://www.linkedin.com/in/tyler-logue-9956a2191"> LinkedIn Profile Page </a> Any peers that want to collab can feel free to contact me here if they would like to do so.</p>
+        </section>
+        <section id="Thank you">
+            <h2>A few projects of mine</h2>
+            <p>If you would like to view some of my work, please head over to <a href="https://github.com/Tlogue">Tylers GitHub repository</a>, please keep in mind that this only some of my projects I have created.</p>
+        </section>
+    </main>
+</body>
+</html>

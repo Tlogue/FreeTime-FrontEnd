@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    margin: 0;
+    padding: 0;
+    color: #dbdbdbda;
+}
+
+header {
+    background-image: url('https://i.ibb.co/k8XRNn1/Adobe-Stock-379676853-Preview.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #9000ff;
+}
+
+nav ul li a:hover {
+    color: #69c500eb;
+}
+
+main {
+    padding: 25px;
+    margin-top: 20px;
+}
+
+#content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 0px;
+}
+
+#text-content {
+    color: #ffffff;
+    max-width: 300px;
+}
+
+#slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0px;
+}
+
+#slideshow {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+}
+
+#slideshow img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#prevBtn, #nextBtn {
+    background-color: #1c1c1c;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+}
+
+#prevBtn {
+    top: 40%;
+}
+
+#nextBtn {
+    top: 50%;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #333333;
+}
+
+#newsletter {
+    background-color: #657778;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    flex: 0 1 calc(25% - 20px);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.team-member:hover {
+    transform: scale(1.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.team-member a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+.team-member p {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
